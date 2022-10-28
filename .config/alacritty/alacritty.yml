@@ -1,0 +1,54 @@
+import:
+  - /home/bao/.config/alacritty/dracula.yml
+
+font:
+  normal:
+    family: JetBrainsMono Nerd Font
+    style:  Bold
+  bold:
+    family: JetBrainsMono Nerd Font
+    style:  Bold
+  italic:
+    family: JetBrainsMono Nerd Font
+    style:  MediumItalic
+  bold_italic:
+    family: JetBrainsMono Nerd Font
+    style: BoldItalic
+  size: 14
+draw_bold_text_with_bright_colors: true
+
+selection:
+  semantic_escape_chars: ',│`|:"'' ()[]{}<>'
+  save_to_clipboard: false
+
+mouse:
+  double_click: { threshold: 300 }
+  triple_click: { threshold: 300 }
+  hide_when_typing: true
+
+mouse_bindings:
+  - { mouse: Middle, action: PasteSelection }
+
+live_config_reload: true
+
+cursor:
+  style: Block
+  unfocused_hollow: true
+
+window:
+  dimensions:
+    columns: 90
+    lines: 25
+  padding:
+    x: 0
+    y: 0
+  dynamic_padding: false
+  decorations: full
+  startup_mode: Windowed
+
+shell:
+ program: zsh
+ # args:
+ #   - -l
+ #   - -c 
+   # - "tmux attach || tmux"
