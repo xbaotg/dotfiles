@@ -25,7 +25,7 @@ uit_temp () {
 # --------------------------------------------------------------------------------
 
 # enviroments
-# source ~/.variables.zsh
+source ~/.variables.zsh
 
 # --------------------------------------------------------------------------------
 
@@ -67,3 +67,11 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# commands
+push_dotfiles() {
+  cd ~;
+  git --git-dir=.git-dotfiles add .zshrc .Xresources .config/nvim .config/alacritty .config/bspwm .config/polybar .config/spaceship .config/sxhkd .tmux.conf .tmux;
+  git --git-dir=.git-dotfiles commit -m "updated";
+  git --git-dir=.git-dotfiles push origin main;
+  cd -;
+}

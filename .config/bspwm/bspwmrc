@@ -20,16 +20,13 @@ bspc config borderless_monocle true
 bspc config gapless_monocle true
 
 bspc config normal_border_color '#111111'
-# bspc config focused_border_color '#d3d3d3'
-# bspc config presel_border_color '#719d72'
 bspc config focused_border_color '#f0c674'
-# bspc config presel_border_color '#719d72'
-# bspc config normal_sticky_border_color '#8abeb7'
-# bspc config focused_sticky_border_color '#f0c674'
-# bspc config urgent_border_color '#b76969'
 
 # auto start programs
+$HOME/.config/polybar/launch.sh
+$HOME/.config/bspwm/locker &
+
 /usr/bin/xset r rate 300 45
-/usr/bin/feh --bg-scale ~/Pictures/WallPapers/Marmotamaps_Wallpaper_Berchtesgaden_Desktop_1920x1080.jpg
+betterlockscreen -w
 ibus-daemon --xim 
-bash ~/.config/polybar/launch.sh
+ibus restart

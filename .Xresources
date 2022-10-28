@@ -1,0 +1,5 @@
+Xft.dpi: 110
+Xft.antialias: true
+
+# auto programs
+/snap/bin/mailspring --background &
