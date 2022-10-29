@@ -22,7 +22,7 @@ super + Escape
 
 # printscreen
 @Print
-	screenshot
+  gnome-screenshot --interactive
 
 shift + @Print
 	screenshot select
