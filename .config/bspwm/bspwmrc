@@ -23,3 +23,8 @@ bspc config normal_border_color '#111111'
 bspc config focused_border_color '#f0c674'
 
 xsetroot -cursor_name left_ptr &
+
+# run on startup
+$HOME/.config/polybar/launch.sh
+bash ~/run_on_boot.sh &
+

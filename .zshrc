@@ -6,6 +6,7 @@ eval "$(starship init zsh)"
 PATH=$PATH:$HOME/.cargo/bin
 PATH=$PATH:$HOME/anaconda3/bin
 PATH=$PATH:$HOME/.config/rofi/scripts
+PATH=$PATH:$HOME/.local/bin
 # STARSHIP_CONFIG=~/.config/starship.toml
 
 # --------------------------------------------------------------------------------
@@ -18,7 +19,7 @@ alias vi=nvim
 
 uit_temp () {
   mkdir -p "$1"/sources/
-  cp /root/Templates/uit.cpp "$1"/sources/main.cpp
+  cp ~/Templates/uit.cpp "$1"/sources/main.cpp
   vi "$1"/sources/main.cpp
 }
 

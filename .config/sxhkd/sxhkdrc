@@ -13,6 +13,9 @@ super + @space
 super + shift + f
   ~/.config/rofi/launchers/type-3/launcher-files.sh
 
+control + super + h
+  rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}' -theme ~/.config/rofi/launchers/type-1/style-5.rasi
+
 control + alt + x
   ~/.config/rofi/powermenu/type-2/powermenu.sh
 
