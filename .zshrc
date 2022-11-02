@@ -7,7 +7,6 @@ PATH=$PATH:$HOME/.cargo/bin
 PATH=$PATH:$HOME/anaconda3/bin
 PATH=$PATH:$HOME/.config/rofi/scripts
 PATH=$PATH:$HOME/.local/bin
-# STARSHIP_CONFIG=~/.config/starship.toml
 
 # --------------------------------------------------------------------------------
 
@@ -16,11 +15,28 @@ alias python=python3
 alias pip=pip3
 alias cl=clear
 alias vi=nvim
+alias v=nvim
 
-uit_temp () {
+uit_temp_with_sources_e () {
   mkdir -p "$1"/sources/
   cp ~/Templates/uit.cpp "$1"/sources/main.cpp
   vi "$1"/sources/main.cpp
+}
+
+uit_temp_no_sources_e () {
+  mkdir -p "$1"/
+  cp ~/Templates/uit.cpp "$1"/main.cpp
+  vi "$1"/main.cpp
+}
+
+uit_temp_with_sources_ne () {
+  mkdir -p "$1"/sources/
+  cp ~/Templates/uit.cpp "$1"/sources/main.cpp
+}
+
+uit_temp_no_sources_ne () {
+  mkdir -p "$1"/
+  cp ~/Templates/uit.cpp "$1"/main.cpp
 }
 
 # --------------------------------------------------------------------------------
