@@ -19,6 +19,9 @@ control + super + h
 control + alt + x
   ~/.config/rofi/powermenu/type-2/powermenu.sh
 
+control + alt + r
+  alacritty -e /usr/bin/ranger
+
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
