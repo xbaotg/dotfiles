@@ -26,5 +26,5 @@ xsetroot -cursor_name left_ptr &
 
 # run on startup
 $HOME/.config/polybar/launch.sh
-bash ~/run_on_boot.sh &
+$HOME/.local/bin/run_on_boot.sh &
 
