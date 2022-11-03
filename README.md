@@ -1,7 +1,7 @@
 # dotfiles
 
-![](.images-dotfile/desktop.png)
+![](screenshots/desktop.png)
 
-![](.images-dotfile/menu.png)
+![](screenshots/menu.png)
 
-![](.images-dotfile/ranger.png)
+![](screenshots/ranger.png)
