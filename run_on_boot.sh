@@ -8,6 +8,7 @@ $HOME/.config/bspwm/locker &
 
 ibus-daemon --xim 
 ibus restart
+greenclip daemon
 
 # set brighness to 80%
 brightnessctl s 75%
