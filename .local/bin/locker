@@ -3,12 +3,12 @@
 xidlehook \
   --not-when-fullscreen \
   --not-when-audio \
-  --timer 180 \
+  --timer 300 \
     'xrandr --output eDP --brightness .2' \
     'xrandr --output eDP --brightness 1' \
   --timer 60 \
     'xrandr --output eDP --brightness 1; betterlockscreen --off 5 -l dim' \
     '' \
-  --timer 360 \
+  --timer 240 \
     'systemctl suspend' \
     ''
