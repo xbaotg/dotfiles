@@ -4,7 +4,6 @@ eval "$(starship init zsh)"
 
 # update path
 PATH=$PATH:$HOME/.cargo/bin
-PATH=$PATH:$HOME/anaconda3/bin
 PATH=$PATH:$HOME/.config/rofi/scripts
 PATH=$PATH:$HOME/.local/bin
 
@@ -69,25 +68,12 @@ antigen bundle MichaelAquilina/zsh-autoswitch-virtualenv
 antigen theme spaceship-prompt/spaceship-prompt
 antigen apply
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/bao/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/bao/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/bao/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/bao/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
+# ---------------------------------------------------------------
 
 # commands
 push_dotfiles() {
   cd ~;
-  git --git-dir=.git-dotfiles add .zshrc .Xresources .config/nvim .config/alacritty .config/rofi .config/bspwm .config/polybar .config/spaceship .config/sxhkd .tmux.conf .config/ranger .tmux ~/screenshots ~/.local/bin README.md;
+  git --git-dir=.git-dotfiles add .zshrc .Xresources .config/nvim .config/alacritty .config/rofi .config/bspwm .config/polybar .config/spaceship .config/sxhkd .tmux.conf .config/ranger .tmux ~/screenshots ~/.local/bin/custom_scripts/ README.md;
   git --git-dir=.git-dotfiles commit -m "updated";
   git --git-dir=.git-dotfiles push origin main;
   cd -;
