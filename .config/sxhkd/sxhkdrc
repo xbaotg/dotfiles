@@ -38,17 +38,13 @@ control + @Print
 
 # brightness keys
 XF86MonBrightnessUp
-  brightnessctl s 10+
+  brightnessctl s 5%+
 
 XF86MonBrightnessDown
-  brightnessctl s 10-
+  brightnessctl s 5%-
 
-# volume keys
-XF86MonBrightness{Up,Down}  
-  brightnessctl s 10{+,-}  
- 
 XF86Audio{Raise,Lower}Volume  
-  pulsemixer --change-volume {+,-}10  
+  pulsemixer --change-volume {+,-}5 
  
 XF86AudioMute  
   pulsemixer  --toggle-mute
