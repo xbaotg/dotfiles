@@ -5,4 +5,4 @@ CUR_LIGHT=`echo $CUR_LIGHT_RAW`
 MAX_LIGHT_RAW=`brightnessctl m`
 MAX_LIGHT=`echo $MAX_LIGHT_RAW`
 
-echo $(((100 * CUR_LIGHT + MAX_LIGHT - 1) / MAX_LIGHT))
+echo $(((100 * CUR_LIGHT + MAX_LIGHT / 2) / MAX_LIGHT))

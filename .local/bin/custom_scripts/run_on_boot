@@ -1,5 +1,17 @@
 #!/bin/sh
 
+# disable mouse natural scroll
+while true; do
+  NEW_MOUSEID=$(xinput | grep "Wireless Device Mouse" | grep -o -E '[0-9]+' | head -n 1)
+    if [ "$MOUSEID" != "$NEW_MOUSEID" ]; then
+      MOUSEID=$NEW_MOUSEID
+      if [ "$MOUSEID" != "" ]; then
+        /usr/bin/xinput set-prop $MOUSEID 'libinput Natural Scrolling Enabled' 0
+      fi
+  fi
+  sleep 10
+done &
+
 betterlockscreen -w
 $HOME/.config/bspwm/locker &
 

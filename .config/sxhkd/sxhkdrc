@@ -22,6 +22,12 @@ control + alt + x
 control + alt + r
   alacritty -e /usr/bin/ranger
 
+control + alt + Tab
+  bspc desktop -f next.occupied
+
+control + alt + shift + Tab
+  bspc desktop -f prev.occupied
+
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
