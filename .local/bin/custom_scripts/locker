@@ -9,6 +9,6 @@ xidlehook \
   --timer 60 \
     'xrandr --output eDP --brightness 1; betterlockscreen -l dim' \
     '' \
-  --timer 240 \
+  --timer 840 \
     'systemctl suspend' \
     ''
