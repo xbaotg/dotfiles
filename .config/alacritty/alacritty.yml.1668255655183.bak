@@ -37,11 +37,11 @@ cursor:
 
 window:
   dimensions:
-    columns: 100
+    columns: 90
     lines: 25
   padding:
-    x: 10
-    y: 10
+    x: 0
+    y: 0
   dynamic_padding: false
   dynamic_title: false
   decorations: none

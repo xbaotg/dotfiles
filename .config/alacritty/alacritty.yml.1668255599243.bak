@@ -4,13 +4,13 @@ import:
 font:
   normal:
     family: JetBrainsMono Nerd Font
-    style:  Bold
+    style: Bold
   bold:
     family: JetBrainsMono Nerd Font
-    style:  Bold
+    style: Bold
   italic:
     family: JetBrainsMono Nerd Font
-    style:  MediumItalic
+    style: MediumItalic
   bold_italic:
     family: JetBrainsMono Nerd Font
     style: BoldItalic
@@ -37,11 +37,11 @@ cursor:
 
 window:
   dimensions:
-    columns: 100
+    columns: 90
     lines: 25
   padding:
-    x: 10
-    y: 10
+    x: 0
+    y: 0
   dynamic_padding: false
   dynamic_title: false
   decorations: none
@@ -49,13 +49,12 @@ window:
   title: Alacritty
 
 shell:
- program: zsh
- args:
-   - -l
-   - -c 
-   - "tmux"
-   # - "tmux attach || tmux"
-
+  program: zsh
+  args:
+    - -l
+    - -c
+    - "tmux"
+    # - "tmux attach || tmux"
 colors:
   # Default colors
   primary:
@@ -83,3 +82,4 @@ colors:
     magenta: '#FFEE99'
     cyan: '#95E6CB'
     white: '#FFFFFF'
+theme: Ayu-Mirage
