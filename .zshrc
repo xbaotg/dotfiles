@@ -73,7 +73,7 @@ antigen apply
 # commands
 push_dotfiles() {
   cd ~;
-  git --git-dir=.git-dotfiles add .zshrc .Xresources .config/nvim .config/alacritty .config/rofi .config/bspwm .config/polybar .config/spaceship .config/sxhkd .tmux.conf .config/ranger ~/screenshots ~/.local/bin/custom_scripts/ README.md;
+  git --git-dir=.git-dotfiles add .zshrc .Xresources .config/nvim .config/alacritty .config/rofi .config/bspwm .config/polybar .config/spaceship .config/sxhkd .tmux.conf .config/ranger  ~/screenshots ~/.local/bin/custom_scripts/ README.md ~/.tmux;
   git --git-dir=.git-dotfiles commit -m "updated";
   git --git-dir=.git-dotfiles push origin main;
   cd -;
