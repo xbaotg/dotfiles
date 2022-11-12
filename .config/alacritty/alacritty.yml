@@ -14,7 +14,7 @@ font:
   bold_italic:
     family: JetBrainsMono Nerd Font
     style: BoldItalic
-  size: 16
+  size: 14
 draw_bold_text_with_bright_colors: true
 
 selection:
@@ -37,14 +37,14 @@ cursor:
 
 window:
   dimensions:
-    columns: 100
+    columns: 90
     lines: 25
   padding:
-    x: 10
-    y: 10
+    x: 5
+    y: 5 
   dynamic_padding: false
   dynamic_title: false
-  decorations: none
+  decorations: full
   startup_mode: Windowed
   title: Alacritty
 
