@@ -183,7 +183,8 @@ local plugins = {
     end,
   },
 
-  ["vimpostor/vim-tpipeline"] = {}
+  ["vimpostor/vim-tpipeline"] = {},
+  ["mg979/vim-visual-multi"] = {}
 }
 
 -- Load all plugins
