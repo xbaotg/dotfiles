@@ -26,8 +26,8 @@ local options = {
 options = require("core.utils").load_override(options, "nvim-treesitter/nvim-treesitter")
 
 treesitter.setup(options)
-require "nvim-treesitter.highlight"
-    local hlmap = vim.treesitter.highlighter.hl_map
-
-    --Misc
-    hlmap.error = nil
+-- require "nvim-treesitter.highlight"
+-- local hlmap = vim.treesitter.highlighter.hl_map
+--
+-- --Misc
+-- hlmap.error = nil

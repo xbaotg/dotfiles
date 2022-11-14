@@ -141,6 +141,7 @@ local plugins = {
   ["hrsh7th/cmp-nvim-lsp"] = { after = "cmp-nvim-lua" },
   ["hrsh7th/cmp-buffer"] = { after = "cmp-nvim-lsp" },
   ["hrsh7th/cmp-path"] = { after = "cmp-buffer" },
+  ["ray-x/lsp_signature.nvim"] = { after = "cmp-path" },
 
   -- misc plugins
   ["windwp/nvim-autopairs"] = {
@@ -184,7 +185,18 @@ local plugins = {
   },
 
   ["vimpostor/vim-tpipeline"] = {},
-  ["mg979/vim-visual-multi"] = {}
+  ["mg979/vim-visual-multi"] = {},
+  ["woosaaahh/sj.nvim"] = {
+    config = function()
+      local sj = require "sj"
+      sj.setup()
+
+      vim.keymap.set("n", "s", sj.run)
+      vim.keymap.set("n", "<A-,>", sj.prev_match)
+      vim.keymap.set("n", "<A-;>", sj.next_match)
+      vim.keymap.set("n", "<localleader>s", sj.redo)
+    end,
+  },
 }
 
 -- Load all plugins
