@@ -4,9 +4,9 @@ if not present then
   return
 end
 
-vim.g.theme_switcher_loaded = true
+-- vim.g.theme_switcher_loaded = true
 
-require("base46").load_highlight "telescope"
+-- require("base46").load_highlight "telescope"
 
 local options = {
   defaults = {
@@ -41,12 +41,15 @@ local options = {
       preview_cutoff = 120,
     },
     file_sorter = require("telescope.sorters").get_fuzzy_file,
-    file_ignore_patterns = { "node_modules" },
+    file_ignore_patterns = {
+      "node_modules",
+      "venv",
+    },
     generic_sorter = require("telescope.sorters").get_generic_fuzzy_sorter,
     path_display = { "truncate" },
     winblend = 0,
     border = {},
-    borderchars = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
+    -- borderchars = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
     color_devicons = true,
     set_env = { ["COLORTERM"] = "truecolor" }, -- default = nil,
     file_previewer = require("telescope.previewers").vim_buffer_cat.new,
@@ -64,7 +67,7 @@ local options = {
       theme = "ivy",
       hijack_netrw = true,
     },
-  }
+  },
 }
 
 -- check for any override
