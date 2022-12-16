@@ -7,6 +7,9 @@ PATH=$PATH:$HOME/.cargo/bin
 PATH=$PATH:$HOME/.config/rofi/scripts
 PATH=$PATH:$HOME/.local/bin
 
+export LD_LIBRARY_PATH=/usr/local/cuda-11.7/lib64:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
+
 # --------------------------------------------------------------------------------
 
 # alias
@@ -15,6 +18,7 @@ alias pip=pip3
 alias cl=clear
 alias vi=nvim
 alias v=nvim
+alias bat=batcat
 
 uit_temp_with_sources_e () {
   mkdir -p "$1"/sources/
@@ -59,6 +63,7 @@ fi
 source ~/.antigen.zsh
 
 antigen use oh-my-zsh
+antigen bundle joshskidmore/zsh-fzf-history-search
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-completions

@@ -14,7 +14,7 @@ font:
   bold_italic:
     family: JetBrainsMono Nerd Font
     style: BoldItalic
-  size: 16
+  size: 13
 draw_bold_text_with_bright_colors: true
 
 selection:
@@ -37,16 +37,16 @@ cursor:
 
 window:
   dimensions:
-    columns: 100
-    lines: 25
+    columns: 80
+    lines: 22
   padding:
     x: 5
     y: 5 
   dynamic_padding: false
   dynamic_title: false
-  decorations: full
+  decorations: Full
   startup_mode: Windowed
-  title: Alacritty
+  title: Terminal
 
 shell:
  program: zsh

@@ -51,17 +51,17 @@ local plugins = {
     end,
   },
 
-  -- ["lukas-reineke/indent-blankline.nvim"] = {
-  --   disabled = true,
-  --   opt = true,
-  --   setup = function()
-  --     require("core.lazy_load").on_file_open "indent-blankline.nvim"
-  --     require("core.utils").load_mappings "blankline"
-  --   end,
-  --   config = function()
-  --     require("plugins.configs.others").blankline()
-  --   end,
-  -- },
+  ["lukas-reineke/indent-blankline.nvim"] = {
+    -- disabled = true,
+    opt = true,
+    setup = function()
+      require("core.lazy_load").on_file_open "indent-blankline.nvim"
+      require("core.utils").load_mappings "blankline"
+    end,
+    config = function()
+      require("plugins.configs.others").blankline()
+    end,
+  },
 
   ["NvChad/nvim-colorizer.lua"] = {
     opt = true,
