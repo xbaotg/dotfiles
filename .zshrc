@@ -19,6 +19,7 @@ alias cl=clear
 alias vi=nvim
 alias v=nvim
 alias bat=batcat
+alias ls=ls -X
 
 uit_temp_with_sources_e () {
   mkdir -p "$1"/sources/
