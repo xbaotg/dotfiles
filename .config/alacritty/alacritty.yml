@@ -40,8 +40,8 @@ window:
     columns: 80
     lines: 22
   padding:
-    x: 5
-    y: 5 
+    x: 10
+    y: 5
   dynamic_padding: false
   dynamic_title: false
   decorations: Full

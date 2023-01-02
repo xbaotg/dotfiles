@@ -94,3 +94,5 @@ local default_providers = {
 for _, provider in ipairs(default_providers) do
   vim.g["loaded_" .. provider .. "_provider"] = 0
 end
+
+vim.cmd [[ set nowrap ]]
