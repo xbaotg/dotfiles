@@ -27,12 +27,12 @@ local options = {
   window = {
     completion = {
       winhighlight = "Normal:CmpPmenu,CursorLine:PmenuSel,Search:None",
-      border = 'rounded',
-      scrollbar = '║'
+      border = "rounded",
+      scrollbar = "║",
     },
     documentation = {
       border = nil,
-      scrollbar = '',
+      scrollbar = "",
     },
   },
   snippet = {
@@ -78,6 +78,8 @@ local options = {
   },
   sources = cmp.config.sources({
     { name = "nvim_lsp_signature_help" },
+  }, {
+    { name = "cmp_tabnine" },
   }, {
     { name = "path" },
   }, {

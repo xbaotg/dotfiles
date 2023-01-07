@@ -116,6 +116,7 @@ M.luasnip = function()
   luasnip.config.set_config(options)
 
   require("luasnip.loaders.from_snipmate").lazy_load()
+  -- require("luasnip.loaders.from_vscode").lazy_load()
 
   vim.api.nvim_create_autocmd("InsertLeave", {
     callback = function()
@@ -146,9 +147,9 @@ M.gitsigns = function()
       topdelete = { hl = "DiffDelete", text = "‾", numhl = "GitSignsDeleteNr" },
       changedelete = { hl = "DiffChangeDelete", text = "~", numhl = "GitSignsChangeNr" },
     },
-    on_attach = function (bufnr)
+    on_attach = function(bufnr)
       utils.load_mappings("gitsigns", { buffer = bufnr })
-    end
+    end,
   }
 
   options = load_override(options, "lewis6991/gitsigns.nvim")

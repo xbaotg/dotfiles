@@ -115,7 +115,6 @@ local plugins = {
   },
 
   -- load luasnips + cmp related in insert mode only
-
   ["rafamadriz/friendly-snippets"] = {
     module = { "cmp", "cmp_nvim_lsp" },
     event = "InsertEnter",
@@ -185,7 +184,6 @@ local plugins = {
   },
 
   ["vimpostor/vim-tpipeline"] = {},
-  ["mg979/vim-visual-multi"] = {},
   ["woosaaahh/sj.nvim"] = {
     config = function()
       local sj = require "sj"
