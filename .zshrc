@@ -19,7 +19,8 @@ alias cl=clear
 alias vi=nvim
 alias v=nvim
 alias bat=batcat
-alias ls=ls -X
+alias ls='exa --no-permissions --no-user --no-time -la --icons -L 1 --no-filesize --group-directories-first -s modified -r'
+alias -g ls='exa --no-permissions --no-user --no-time -la --icons -L 1 --no-filesize --group-directories-first -s modified -r'
 alias py=python3
 
 uit_temp_with_sources_e () {
@@ -85,3 +86,6 @@ push_dotfiles() {
   git --git-dir=.git-dotfiles push origin main;
   cd -;
 }
+
+alias ls='exa --no-permissions --no-user --no-time -a --icons --no-filesize --group-directories-first -s modified -r'
+alias -g ls='exa --no-permissions --no-user --no-time -a --icons --no-filesize --group-directories-first -s modified -r'
