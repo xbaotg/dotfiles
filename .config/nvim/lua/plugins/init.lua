@@ -33,15 +33,15 @@ local plugins = {
     end,
   },
 
-  ["NvChad/nvterm"] = {
-    module = "nvterm",
-    config = function()
-      require "plugins.configs.nvterm"
-    end,
-    setup = function()
-      require("core.utils").load_mappings "nvterm"
-    end,
-  },
+  -- ["NvChad/nvterm"] = {
+  --   module = "nvterm",
+  --   config = function()
+  --     require "plugins.configs.nvterm"
+  --   end,
+  --   setup = function()
+  --     require("core.utils").load_mappings "nvterm"
+  --   end,
+  -- },
 
   ["kyazdani42/nvim-web-devicons"] = {
     after = "ui",
