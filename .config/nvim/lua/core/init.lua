@@ -2,12 +2,6 @@
 local is_windows = vim.loop.os_uname().sysname == "Windows_NT"
 vim.env.PATH = vim.env.PATH .. (is_windows and ";" or ":") .. vim.fn.stdpath "data" .. "/mason/bin"
 
--- commands
-vim.cmd "silent! command! NvChadUpdate lua require('nvchad').update_nvchad()"
-vim.cmd "silent! command! NvChadSnapshotCreate lua require('nvchad').snap_create()"
-vim.cmd "silent! command! NvChadSnapshotDelete lua require('nvchad').snap_delete()"
-vim.cmd "silent! command! NvChadSnapshotCheckout lua require('nvchad').snap_checkout()"
-
 -- autocmds
 local autocmd = vim.api.nvim_create_autocmd
 
