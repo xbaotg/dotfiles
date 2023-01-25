@@ -195,6 +195,12 @@ local plugins = {
       vim.keymap.set("n", "<localleader>s", sj.redo)
     end,
   },
+
+  ["asiryk/auto-hlsearch.nvim"] = {
+    config = function()
+      require("auto-hlsearch").setup()
+    end,
+  },
 }
 
 -- Load all plugins
