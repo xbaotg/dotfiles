@@ -1,14 +1,13 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
-# Terminate already running bar instances
-killall polybar
+export CARD_BL=$(ls /sys/class/backlight/)
 
-# Wait until the processes have been shut down
-while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
+# Create env variable for polybar CPU temp.
+for i in /sys/class/hwmon/hwmon*/temp*_input; do 
+    if [ "$(<$(dirname $i)/name): $(cat ${i%_*}_label 2>/dev/null || echo $(basename ${i%_*}))" = "coretemp: temp1_input" ]; then
+        export HWMON_PATH="$i"
+    fi
+done
 
-# Launch polybar
-polybar main -c $(dirname $0)/config.ini &
-
-# if [[ $(xrandr -q | grep 'HDMI1 connected') ]]; then
-# 	polybar external -c $(dirname $0)/config.ini &
-# fi
+polybar --quiet --reload top -c ~/.config/polybar/config.ini &
+polybar --quiet --reload bottom -c ~/.config/polybar/config.ini &

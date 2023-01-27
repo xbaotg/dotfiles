@@ -1,0 +1,8 @@
+#!/bin/sh
+
+MOUSE=$(grep . /sys/bus/usb/devices/*/power/wakeup | grep enabled | cut -d "/" -f 6)
+
+if [ ! $MOUSE = ""] 
+then
+  
+fi

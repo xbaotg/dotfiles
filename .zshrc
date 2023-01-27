@@ -9,6 +9,7 @@ PATH=$PATH:$HOME/.local/bin
 
 export LD_LIBRARY_PATH=/usr/local/cuda-11.7/lib64:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
+export CARD_BL=$(ls /sys/class/backlight/)
 
 # --------------------------------------------------------------------------------
 
@@ -82,7 +83,7 @@ antigen apply
 push_dotfiles() {
   cd ~;
   git --git-dir=.git-dotfiles add .zshrc .Xresources .config/nvim .config/alacritty .config/rofi .config/bspwm .config/polybar .config/spaceship .config/sxhkd .tmux.conf .config/ranger ~/.config/pycodestyle ~/.local/bin/custom_scripts/ ~/.tmux;
-  git --git-dir=.git-dotfiles commit -m "updated";
+  git --git-dir=.git-dotfiles commit -m "$1";
   git --git-dir=.git-dotfiles push origin main;
   cd -;
 }
