@@ -2,7 +2,8 @@
 
 # disable mouse natural scroll
 while true; do
-  NEW_MOUSEID=$(xinput | grep "Wireless Device Mouse" | grep -o -E '[0-9]+' | head -n 1)
+  # NEW_MOUSEID=$(xinput | grep "Wireless Device Mouse" | grep -o -E '[0-9]+' | head -n 1)
+  NEW_MOUSEID=$(xinput | grep "2.4G Wireless Optical Mouse  Mouse" | head -n 1 | grep -o -E 'id=[0-9]+' | grep -o -E '[0-9]+')
     if [ "$MOUSEID" != "$NEW_MOUSEID" ]; then
       MOUSEID=$NEW_MOUSEID
       if [ "$MOUSEID" != "" ]; then
@@ -19,7 +20,7 @@ betterlockscreen -w
 
 ibus-daemon --xim 
 ibus restart
-# greenclip daemon
+greenclip daemon
 
 # set brighness to 80%
 brightnessctl s 85%

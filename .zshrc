@@ -23,6 +23,7 @@ alias bat=batcat
 alias ls='exa --no-permissions --no-user --no-time -la --icons -L 1 --no-filesize --group-directories-first -s modified -r'
 alias -g ls='exa --no-permissions --no-user --no-time -la --icons -L 1 --no-filesize --group-directories-first -s modified -r'
 alias py=python3
+alias update='sudo apt update ; sudo apt upgrade -y'
 
 uit_temp_with_sources_e () {
   mkdir -p "$1"/sources/
@@ -57,6 +58,7 @@ source ~/.variables.zsh
 export FZF_COMPLETION_OPTS='--border --info=inline'
 if type rg &> /dev/null; then
     export FZF_DEFAULT_COMMAND='rg --files --hidden'
+    export FZF_CTRL_T_COMMAND='rg --files --hidden'
 fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -64,6 +66,8 @@ fi
 # --------------------------------------------------------------------------------
 
 # antigen
+# bindkey '\t' autosuggest-accept
+
 source ~/.antigen.zsh
 
 antigen use oh-my-zsh
@@ -82,7 +86,7 @@ antigen apply
 # commands
 push_dotfiles() {
   cd ~;
-  git --git-dir=.git-dotfiles add .zshrc .Xresources .config/nvim .config/alacritty .config/rofi .config/bspwm .config/polybar .config/spaceship .config/sxhkd .tmux.conf .config/ranger ~/.config/pycodestyle ~/.local/bin/custom_scripts/ ~/.tmux;
+  git --git-dir=.git-dotfiles add .zshrc .Xresources .config/nvim .config/alacritty .config/rofi .config/bspwm .config/polybar .config/spaceship .config/sxhkd .tmux.conf .config/dunst/ .config/ranger ~/.config/pycodestyle ~/.local/bin/custom_scripts/ ~/.tmux;
   git --git-dir=.git-dotfiles commit -m "$1";
   git --git-dir=.git-dotfiles push origin main;
   cd -;

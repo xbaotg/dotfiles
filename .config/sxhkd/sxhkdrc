@@ -8,7 +8,7 @@ super + Return
 
 # program launcher
 super + @space
-  ~/.config/rofi/launchers/type-3/launcher.sh
+  rofi -show drun -theme $HOME/.config/rofi/launcher.rasi
 
 super + shift + f
   ~/.config/rofi/launchers/type-3/launcher-files.sh

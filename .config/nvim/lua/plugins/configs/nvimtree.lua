@@ -18,6 +18,7 @@ local options = {
       "^.gitkeep$",
       "^.github$",
       "^.ipynb_checkpoints$",
+      "^.nix"
     },
     exclude = { vim.fn.stdpath "config" .. "/lua/custom" },
   },

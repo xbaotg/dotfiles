@@ -11,7 +11,7 @@ bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 
 bspc config window_gap 5
-# bspc config border_width 3
+bspc config border_width 3
 bspc config normal_border_color "#32344a"
 bspc config focused_border_color "#787c99"
 
@@ -19,8 +19,8 @@ bspc config split_ratio 0.5
 bspc config borderless_monocle true
 bspc config gapless_monocle true
 
-# bspc config normal_border_color '#111111'
-# bspc config focused_border_color '#11d177'
+bspc config normal_border_color '#111111'
+bspc config focused_border_color '#2596be'
 
 xsetroot -cursor_name left_ptr &
 
