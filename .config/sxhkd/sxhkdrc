@@ -8,10 +8,10 @@ super + Return
 
 # program launcher
 super + @space
-  rofi -show drun -theme $HOME/.config/rofi/launcher.rasi
+  rofi -show drun -theme $HOME/.config/rofi/launchers/type-2/style-7.rasi
 
 super + shift + f
-  ~/.config/rofi/launchers/type-3/launcher-files.sh
+  ~/.config/rofi/launchers/type-4/launcher-files.sh
 
 control + super + h
   rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}' -theme ~/.config/rofi/launchers/type-1/style-5.rasi

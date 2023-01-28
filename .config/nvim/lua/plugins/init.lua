@@ -183,7 +183,7 @@ local plugins = {
     end,
   },
 
-  ["vimpostor/vim-tpipeline"] = {},
+  -- ["vimpostor/vim-tpipeline"] = {},
   ["woosaaahh/sj.nvim"] = {
     config = function()
       local sj = require "sj"
@@ -195,12 +195,12 @@ local plugins = {
       vim.keymap.set("n", "<localleader>s", sj.redo)
     end,
   },
-
-  ["asiryk/auto-hlsearch.nvim"] = {
-    config = function()
-      require("auto-hlsearch").setup()
-    end,
-  },
+  --
+  -- ["asiryk/auto-hlsearch.nvim"] = {
+  --   config = function()
+  --     require("auto-hlsearch").setup()
+  --   end,
+  -- },
 }
 
 -- Load all plugins

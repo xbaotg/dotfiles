@@ -10,7 +10,7 @@ bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 
-bspc config window_gap 5
+bspc config window_gap 8
 bspc config border_width 3
 bspc config normal_border_color "#32344a"
 bspc config focused_border_color "#787c99"
@@ -22,10 +22,14 @@ bspc config gapless_monocle true
 bspc config normal_border_color '#111111'
 bspc config focused_border_color '#2596be'
 
+# focus on hover
+bspc config focus_follows_pointer true
+
 xsetroot -cursor_name left_ptr &
 
 # run on startup
 flameshot &
+picom -b --config $HOME/.config/picom/picom.conf
 
 $HOME/.config/polybar/launch.sh
 $HOME/.local/bin/custom_scripts/run_on_boot &
