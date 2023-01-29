@@ -8,5 +8,5 @@
  **/
 
 * {
-    font: "Roboto 12";
+    font: "Ubuntu 12";
 }
