@@ -50,10 +50,10 @@ window:
 
 shell:
  program: zsh
- # args:
- #   - -l
- #   - -c 
- #   - "tmux"
+ args:
+   - -l
+   - -c 
+   - "tmux"
    # - "tmux attach || tmux"
 
 colors:

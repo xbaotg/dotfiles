@@ -8,16 +8,16 @@ super + Return
 
 # program launcher
 super + @space
-  rofi -show drun -theme $HOME/.config/rofi/launchers/type-2/style-7.rasi
+  rofi -show drun
 
-super + shift + f
-  ~/.config/rofi/launchers/type-4/launcher-files.sh
+# super + shift + f
+#   ~/.config/rofi/launchers/type-4/launcher-files.sh
 
 control + shift + h
-  rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}' -theme ~/.config/rofi/launchers/type-2/style-1.rasi
+  rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 
 control + alt + x
-  ~/.config/rofi/powermenu/type-2/powermenu.sh
+  ~/.local/bin/custom_scripts/powermenu.sh &
 
 control + alt + r
   alacritty -e /usr/bin/ranger

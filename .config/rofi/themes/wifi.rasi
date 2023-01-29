@@ -1,20 +1,14 @@
 configuration {
-  modi: [run,drun,window];
-    show-icons:               true;
-    display-drun:             "  Apps";
-    display-run:              "  Run";
-    display-window:           "  Window";
-    drun-display-format:      "{name}";
+    show-icons:               false;
     disable-history:          false;
     click-to-exit:            true;
     location:                 0;
-    sidebar-mode:             true;
 }
 
 @import "colors.rasi"
 
 * {
-    font:                     "JetBrains Mono Nerd Font 12";
+    font:                    "JetBrainsMono Nerd Font 12";
     background-color:         @background;
 }
 
@@ -22,18 +16,26 @@ window {
     border:                   4px;
     border-color:             @brdr;
     border-radius:            0px;
-    width:                    600px;
+    width:                    450px;
     height:                   0px;
+}
+
+prompt {
+    spacing:                  0;
+    border:                   0;
+    border-radius:            8px;
+    background-color:         @foreground;
+    text-color:               @background-alt;
+    padding:                  6px 14px 6px 14px;
+    font:                     "JetBrainsMono Nerd Font 12";
 }
 
 textbox-prompt-colon {
     expand:                   false;
-    str:                      "   ";
+    str:                      "";
     padding:                  6px 4px 6px 4px;
-    text-color:               @background;
-    font:                     "Iosevka Nerd Font 10";
-    background-color:         @foreground;
-    border-radius:            8px;
+    text-color:               inherit;
+    font:                     "JetBrainsMono Nerd Font 12";
 }
 
 entry {
@@ -42,8 +44,8 @@ entry {
     horizontal-align:         0;
     text-color:               @foreground;
     placeholder-color:        @foreground;
-    placeholder:              "Search...";
-    padding:                  8px 8px 8px 8px;
+    placeholder:              "Enter...";
+    padding:                  6px 2px 6px 2px;
     border:                   0px 0px 0px 0px;
     border-color:             @selected;
     border-radius:            0px;
@@ -60,7 +62,7 @@ inputbar {
     border:                   0px;
     border-color:             @selected;
     border-radius:            0px;
-    children:                 [ textbox-prompt-colon,entry ];
+    children:                 [ prompt,textbox-prompt-colon,entry ];
 }
 
 mainbox {
@@ -149,8 +151,8 @@ button {
 }
 
 button selected {
-    background-color:         @foreground;
-    text-color:               @background;
+    background-color:         @background-alt;
+    text-color:               @foreground;
     border:                   0px;
     border-radius:            8px;
     border-color:             @selected;
