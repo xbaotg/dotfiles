@@ -24,7 +24,7 @@ ENTRIES=`ibus read-config | grep engines-order | sed 's/engines-order:\|\[\|\]\|
 #     OUTPUT="$OUTPUT engine: $e\n"
 # done
 
-SELECTION=`printf "%s\n" $ENTRIES | rofi -dmenu -i -p 'Select'`
+SELECTION=`printf "%s\n" $ENTRIES | rofi -dmenu -i -p 'Select' -theme $HOME/.config/rofi/launchers/type-2/style-1.rasi`
 
 if [ -n $SELECTION ] && [ ! $SELECTION = '\n' ]
 then

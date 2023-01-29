@@ -8,7 +8,7 @@ require("base46").load_highlight "nvimtree"
 
 local options = {
   filters = {
-    dotfiles = false,
+    dotfiles = true,
     custom = {
       "^.git$",
       "^.venv$",
@@ -29,6 +29,7 @@ local options = {
   hijack_cursor = true,
   hijack_unnamed_buffer_when_opening = false,
   update_cwd = true,
+  auto_close = true,
   update_focused_file = {
     enable = true,
     update_cwd = false,
@@ -100,17 +101,24 @@ vim.g.nvimtree_side = options.view.side
 
 nvimtree.setup(options)
 
-vim.o.confirm = true
-vim.api.nvim_create_autocmd("BufEnter", {
-  group = vim.api.nvim_create_augroup("NvimTreeClose", { clear = true }),
-  callback = function()
-    local layout = vim.api.nvim_call_function("winlayout", {})
-    if
-      layout[1] == "leaf"
-      and vim.api.nvim_buf_get_option(vim.api.nvim_win_get_buf(layout[2]), "filetype") == "NvimTree"
-      and layout[3] == nil
-    then
-      vim.cmd "quit"
-    end
-  end,
-})
+-- nvim-tree is also there in modified buffers so this function filter it out
+-- local modifiedBufs = function(bufs)
+--     local t = 0
+--     for k,v in pairs(bufs) do
+--         if v.name:match("NvimTree_") == nil then
+--             t = t + 1
+--         end
+--     end
+--     return t
+-- end
+--
+-- vim.api.nvim_create_autocmd("BufEnter", {
+--     nested = true,
+--     callback = function()
+--         if #vim.api.nvim_list_wins() == 1 and
+--         vim.api.nvim_buf_get_name(0):match("NvimTree_") ~= nil and
+--         modifiedBufs(vim.fn.getbufinfo({bufmodified = 1})) == 0 then
+--             vim.cmd "quit"
+--         end
+--     end
+-- })

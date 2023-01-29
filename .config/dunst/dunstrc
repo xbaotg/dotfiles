@@ -50,7 +50,7 @@
     background = "#232323"
     foreground = "#a8a8a8"
     frame_color = "#d64e4e"
-    timeout = 10
+    timeout = 3
 
 [urgency_normal]
     background = "#232323"
