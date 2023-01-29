@@ -1,0 +1,41 @@
+polybar|notice:  Parsing config file: config.ini
+polybar|notice:  Listening for IPC messages (PID: 58112)
+polybar|notice:  Loading module 'left' of type 'custom/text'
+polybar|notice:  Loading module 'date' of type 'internal/date'
+polybar|notice:  Loading module 'right' of type 'custom/text'
+polybar|notice:  Loading module 'space' of type 'custom/text'
+polybar|notice:  Loading module 'space' of type 'custom/text'
+polybar|notice:  Loading module 'left' of type 'custom/text'
+polybar|notice:  Loading module 'wlan' of type 'internal/network'
+polybar|notice:  module/wlan: Discovered wireless interface wlp2s0
+polybar|notice:  Loading module 'right' of type 'custom/text'
+polybar|notice:  Loading module 'space' of type 'custom/text'
+polybar|notice:  Loading module 'space' of type 'custom/text'
+polybar|notice:  Loading module 'left' of type 'custom/text'
+polybar|notice:  Loading module 'ibus' of type 'custom/script'
+polybar|notice:  Loading module 'right' of type 'custom/text'
+polybar|notice:  Loading module 'left' of type 'custom/text'
+polybar|notice:  Loading module 'bspwm' of type 'internal/bspwm'
+polybar|notice:  Loading module 'right' of type 'custom/text'
+polybar|notice:  Loading module 'tray' of type 'internal/tray'
+polybar|error: Disabling module "tray" (reason: Unknown module: internal/tray)
+polybar|notice:  Loading module 'space' of type 'custom/text'
+polybar|notice:  Loading module 'left' of type 'custom/text'
+polybar|notice:  Loading module 'volume' of type 'internal/pulseaudio'
+polybar|notice:  pulseaudio: using default sink alsa_output.pci-0000_04_00.6.analog-stereo
+polybar|notice:  Loading module 'right' of type 'custom/text'
+polybar|notice:  Loading module 'space' of type 'custom/text'
+polybar|notice:  Loading module 'left' of type 'custom/text'
+polybar|notice:  Loading module 'backlight' of type 'internal/backlight'
+polybar|notice:  Loading module 'right' of type 'custom/text'
+polybar|notice:  Loading module 'space' of type 'custom/text'
+polybar|notice:  Loading module 'left' of type 'custom/text'
+polybar|notice:  Loading module 'battery' of type 'internal/battery'
+polybar|notice:  Loading module 'right' of type 'custom/text'
+polybar|notice:  Loading module 'space' of type 'custom/text'
+polybar|notice:  Loaded 29 modules
+polybar|notice:  Loaded font "JetBrainsMono Nerd Font:style=Bold:size=12" (name=JetBrainsMono Nerd Font, offset=2, file=/home/bao/.local/share/fonts/JetBrains Mono Bold Nerd Font Complete.ttf)
+polybar|notice:  Loaded font "JetBrainsMono Nerd Font:style=Bold:size=18" (name=JetBrainsMono Nerd Font, offset=4, file=/home/bao/.local/share/fonts/JetBrains Mono Bold Nerd Font Complete.ttf)
+polybar|notice:  Loaded font "JetBrainsMono Nerd Font:size=18" (name=JetBrainsMono Nerd Font, offset=5, file=/home/bao/.local/share/fonts/JetBrains-Mono-Nerd-Font-Complete.ttf)
+polybar|notice:  Received signal(2): Interrupt
+polybar|notice:  Termination signal received, shutting down...

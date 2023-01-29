@@ -79,9 +79,9 @@ local options = {
   sources = cmp.config.sources({
     { name = "nvim_lsp_signature_help" },
   }, {
-    { name = "cmp_tabnine" },
-  }, {
     { name = "path" },
+  }, {
+    { name = "cmp_tabnine" },
   }, {
     { name = "nvim_lsp" },
   }, {

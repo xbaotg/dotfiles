@@ -1,5 +1,7 @@
 #!/bin/sh
 
+export CARD_BL=$(ls /sys/class/backlight/)
+
 # disable mouse natural scroll
 while true; do
   # NEW_MOUSEID=$(xinput | grep "Wireless Device Mouse" | grep -o -E '[0-9]+' | head -n 1)

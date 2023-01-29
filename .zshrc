@@ -25,6 +25,8 @@ alias -g ls='exa --no-permissions --no-user --no-time -la --icons -L 1 --no-file
 alias py=python3
 alias update='sudo apt update ; sudo apt upgrade -y'
 
+wifimenu () { bash ~/.local/bin/custom_scripts/rofi-wifi-menu.sh & }
+
 uit_temp_with_sources_e () {
   mkdir -p "$1"/sources/
   cp ~/Templates/uit.cpp "$1"/sources/main.cpp
@@ -86,7 +88,7 @@ antigen apply
 # commands
 push_dotfiles() {
   cd ~;
-  git --git-dir=.git-dotfiles add .zshrc .Xresources .config/nvim .config/alacritty .config/rofi .config/bspwm .config/polybar .config/spaceship .config/sxhkd .tmux.conf .config/dunst/ .config/ranger ~/.config/pycodestyle ~/.local/bin/custom_scripts/ ~/.tmux ~/.config/betterlockscreenrc ~/.config/picom/ README.md ~/.imgs_dot/;
+  git --git-dir=.git-dotfiles add .zshrc .Xresources .config/nvim .config/alacritty .config/rofi .config/bspwm .config/polybar .config/spaceship .config/sxhkd .tmux.conf .config/dunst/ .config/ranger ~/.config/pycodestyle ~/.local/bin/custom_scripts/ ~/.tmux ~/.config/betterlockscreenrc ~/.config/picom/ README.md ~/.imgs_dot/ ~/.config/mini-lightdm;
   git --git-dir=.git-dotfiles commit -m "$1";
   git --git-dir=.git-dotfiles push origin main;
   cd -;
