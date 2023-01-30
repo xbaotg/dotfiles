@@ -6,12 +6,12 @@
 super + Return
 	alacritty
 
+super + shift + Return 
+  alacritty --class 'Alacritty-Floating'
+
 # program launcher
 super + @space
   rofi -show drun
-
-# super + shift + f
-#   ~/.config/rofi/launchers/type-4/launcher-files.sh
 
 control + shift + h
   rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
@@ -22,11 +22,19 @@ control + alt + x
 control + alt + r
   alacritty -e /usr/bin/ranger
 
+control + alt + l
+    betterlockscreen --lock
+
+super + shift + {f,w}
+	{thunar,google-chrome-stable}
+
 control + alt + Tab
   bspc desktop -f next.occupied
 
 control + alt + shift + Tab
   bspc desktop -f prev.occupied
+
+
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -64,7 +72,7 @@ super + alt + {q,r}
 	bspc {quit,wm -r}
 
 # close and kill
-super + {_,shift + }w
+super + {_,shift + }c
 	bspc node -{c,k}
 
 # alternate between the tiled and monocle layout
@@ -104,7 +112,11 @@ super + {p,b,comma,period}
 	bspc node -f @{parent,brother,first,second}
 
 # focus the next/previous window in the current desktop
-super + {_,shift + }c
+# super + {_,shift + }c
+# 	bspc node -f {next,prev}.local.!hidden.window
+
+# Change focus to next window, including floating window
+alt + {_,shift + }Tab
 	bspc node -f {next,prev}.local.!hidden.window
 
 # focus the next/previous desktop in the current monitor

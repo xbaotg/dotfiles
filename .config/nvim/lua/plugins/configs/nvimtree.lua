@@ -18,27 +18,48 @@ local options = {
       "^.gitkeep$",
       "^.github$",
       "^.ipynb_checkpoints$",
-      "^.nix"
+      "^.nix",
     },
     exclude = { vim.fn.stdpath "config" .. "/lua/custom" },
   },
-  disable_netrw = true,
+  -- disable_netrw = false,
+  -- hijack_netrw = false,
+  -- open_on_setup = false,
+  -- ignore_ft_on_setup = { "alpha" },
+  -- hijack_cursor = false,
+  -- hijack_unnamed_buffer_when_opening = false,
+  -- update_cwd = true,
+  -- auto_close = true,
+  auto_reload_on_write = false,
+  disable_netrw = false,
+  hijack_cursor = false,
   hijack_netrw = true,
-  open_on_setup = false,
-  ignore_ft_on_setup = { "alpha" },
-  hijack_cursor = true,
   hijack_unnamed_buffer_when_opening = false,
-  update_cwd = true,
-  auto_close = true,
+  ignore_buffer_on_setup = false,
+  open_on_setup = false,
+  open_on_setup_file = false,
+  sort_by = "name",
+  root_dirs = {},
+  prefer_startup_root = false,
+  sync_root_with_cwd = true,
+  reload_on_bufenter = false,
+  respect_buf_cwd = false,
+  on_attach = "disable",
+  remove_keymaps = false,
+  select_prompts = false,
   update_focused_file = {
     enable = true,
     update_cwd = false,
   },
   view = {
-    adaptive_size = true,
+    adaptive_size = false,
     side = "left",
-    width = 25,
+    width = 30,
     hide_root_folder = true,
+    preserve_window_proportions = false,
+    number = false,
+    relativenumber = false,
+    signcolumn = "yes",
   },
   git = {
     enable = false,
@@ -49,9 +70,14 @@ local options = {
   },
   actions = {
     open_file = {
+      quit_on_open = true,
       resize_window = true,
     },
   },
+  hijack_directories = {
+        enable = false,
+        auto_open = true,
+      },
   renderer = {
     highlight_git = false,
     highlight_opened_files = "none",
@@ -100,25 +126,3 @@ options = require("core.utils").load_override(options, "kyazdani42/nvim-tree.lua
 vim.g.nvimtree_side = options.view.side
 
 nvimtree.setup(options)
-
--- nvim-tree is also there in modified buffers so this function filter it out
--- local modifiedBufs = function(bufs)
---     local t = 0
---     for k,v in pairs(bufs) do
---         if v.name:match("NvimTree_") == nil then
---             t = t + 1
---         end
---     end
---     return t
--- end
---
--- vim.api.nvim_create_autocmd("BufEnter", {
---     nested = true,
---     callback = function()
---         if #vim.api.nvim_list_wins() == 1 and
---         vim.api.nvim_buf_get_name(0):match("NvimTree_") ~= nil and
---         modifiedBufs(vim.fn.getbufinfo({bufmodified = 1})) == 0 then
---             vim.cmd "quit"
---         end
---     end
--- })
