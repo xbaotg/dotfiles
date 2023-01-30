@@ -42,13 +42,13 @@ super + Escape
 
 # printscreen
 @Print
-  gnome-screenshot --interactive
+  flameshot gui -p ~/Pictures/Screenshots/
 
 shift + @Print
-	screenshot select
+  flameshot gui d 3000 -p ~/Pictures/Screenshots/
 
 control + @Print
-	screenshot window
+  flameshot gui d 5000 -p ~/Pictures/Screenshots/
 
 # brightness keys
 XF86MonBrightnessUp
