@@ -1,5 +1,3 @@
-eval "$(starship init zsh)"
-
 # --------------------------------------------------------------------------------
 
 # update path
@@ -25,7 +23,9 @@ alias -g ls='exa --no-permissions --no-user --no-time -la --icons -L 1 --no-file
 alias py=python3
 alias update='sudo apt update ; sudo apt upgrade -y'
 
-wifimenu () { bash ~/.local/bin/custom_scripts/rofi-wifi-menu.sh & }
+install() {
+  sudo apt install $1
+}
 
 uit_temp_with_sources_e () {
   mkdir -p "$1"/sources/
@@ -80,15 +80,18 @@ antigen bundle zsh-users/zsh-completions
 antigen bundle command-not-found
 antigen bundle colored-man-pages
 antigen bundle MichaelAquilina/zsh-autoswitch-virtualenv
-antigen theme spaceship-prompt/spaceship-prompt
+# antigen theme spaceship-prompt/spaceship-prompt
 antigen apply
+
+eval "$(starship init zsh)"
+
 
 # ---------------------------------------------------------------
 
 # commands
 push_dotfiles() {
   cd ~;
-  git --git-dir=.git-dotfiles add .zshrc .Xresources .config/nvim .config/alacritty .config/rofi .config/bspwm .config/polybar .config/spaceship .config/sxhkd .tmux.conf .config/dunst/ .config/ranger ~/.config/pycodestyle ~/.local/bin/custom_scripts/ ~/.tmux ~/.config/betterlockscreenrc ~/.config/picom/ README.md ~/.imgs_dot/ ~/.config/mini-lightdm ~/.config/zathura/ ~/.config/gtk-3.0/;
+  git --git-dir=.git-dotfiles add .zshrc .Xresources .config/nvim .config/alacritty .config/rofi .config/bspwm .config/polybar .config/spaceship .config/sxhkd .tmux.conf .config/dunst/ .config/ranger ~/.config/pycodestyle ~/.local/bin/scripts/ ~/.local/bin/themes/ ~/.config/flameshot/ ~/.tmux ~/.config/betterlockscreenrc ~/.config/picom/ README.md ~/.imgs_dot/ ~/.config/mini-lightdm ~/.config/zathura/ ~/.config/gtk-3.0/;
   git --git-dir=.git-dotfiles commit -m "$1";
   git --git-dir=.git-dotfiles push origin main;
   cd -;

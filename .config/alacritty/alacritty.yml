@@ -1,3 +1,9 @@
+# 
+#
+# DON'T ADD NEW LINE -> AFFECT LINE NUMBER -> NEOVIM PADDING
+# 
+#
+
 import:
   - /home/bao/.config/alacritty/dracula.yml
 
@@ -38,10 +44,10 @@ cursor:
 window:
   dimensions:
     columns: 80
-    lines: 22
+    lines: 24
   padding:
-    x: 10
-    y: 10
+    x: 15
+    y: 15
   dynamic_padding: true
   dynamic_title: false
   # decorations: Full
@@ -50,10 +56,10 @@ window:
 
 shell:
  program: zsh
- args:
-   - -l
-   - -c 
-   - "tmux"
+ # args:
+   # - -l
+   # - -c 
+   # - "tmux"
    # - "tmux attach || tmux"
 
 colors:

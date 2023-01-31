@@ -17,13 +17,13 @@ control + shift + h
   rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 
 control + alt + x
-  ~/.local/bin/custom_scripts/powermenu.sh &
+  ~/.local/bin/scripts/powermenu.sh &
 
 control + alt + r
   alacritty -e /usr/bin/ranger
 
 control + alt + l
-    betterlockscreen --lock
+  betterlockscreen --lock
 
 super + shift + {f,w}
 	{thunar,google-chrome-stable}
@@ -42,26 +42,26 @@ super + Escape
 
 # printscreen
 @Print
-  flameshot gui -p ~/Pictures/Screenshots/
+  flameshot gui
 
 shift + @Print
-  flameshot gui d 3000 -p ~/Pictures/Screenshots/
+  flameshot gui d 3000
 
 control + @Print
-  flameshot gui d 5000 -p ~/Pictures/Screenshots/
+  flameshot gui d 5000
 
 # brightness keys
 XF86MonBrightnessUp
-  brightnessctl s 5%+
+  light -A 5 ; dunstify "Brightness: $(light -G | cut -d '.' -f1)%" -I ~/.local/bin/themes/brightness.svg -a volume -h string:x-dunst-stack-tag:brightness -u low
 
 XF86MonBrightnessDown
-  brightnessctl s 5%-
+  light -U 5 ; dunstify "Brightness: $(light -G | cut -d '.' -f1)%" -I ~/.local/bin/themes/brightness.svg -a volume -h string:x-dunst-stack-tag:brightness -u low
 
 XF86Audio{Raise,Lower}Volume  
-  pulsemixer --change-volume {+,-}5 
+  pulsemixer --change-volume {+,-}5 ; dunstify "Volume: $(pulsemixer --get-volume | cut -d' ' -f1)%" -I ~/.local/bin/themes/volume.svg -a volume -h string:x-dunst-stack-tag:obvolume -u low
  
 XF86AudioMute  
-  pulsemixer  --toggle-mute
+  pulsemixer  --toggle-mute ; dunstify "Volume: $(if [ ! $(pulsemixer --get-mute) = 0 ]; then echo 'Muted'; else echo $(pulsemixer --get-volume | cut -d' ' -f1)%; fi)" -I ~/.local/bin/themes/volume.svg -a volume -h string:x-dunst-stack-tag:obvolume -u low
 
 #
 # bspwm hotkeys

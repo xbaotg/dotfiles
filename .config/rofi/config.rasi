@@ -8,13 +8,13 @@ configuration {
     disable-history:          false;
     click-to-exit:            true;
     location:                 0;
-    sidebar-mode:             true;
+    sidebar-mode:             false;
 }
 
 @import "colors.rasi"
 
 * {
-    font:                     "JetBrains Mono Nerd Font 12";
+    font:                     "JetBrains Mono Nerd Font 13";
     background-color:         @background;
 }
 
@@ -29,7 +29,7 @@ window {
 textbox-prompt-colon {
     expand:                   false;
     str:                      "   ";
-    padding:                  6px 4px 6px 4px;
+    padding:                  10px 10px 10px 10px;
     text-color:               @background;
     font:                     "Iosevka Nerd Font 10";
     background-color:         @foreground;
@@ -81,9 +81,17 @@ listview {
     padding:                  5px 0px 0px;
 }
 
-element-text, element-icon {
+element-text {
     background-color:         inherit;
     text-color:               inherit;
+    vertical-align: 0.5;
+}
+
+element-icon {
+    background-color:         inherit;
+    text-color:               inherit;
+    size: 30;
+    padding: 0px 10px 0px 10px;
 }
 
 element {

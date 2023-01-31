@@ -51,6 +51,6 @@ flameshot &
 picom -b --config $HOME/.config/picom/picom.conf
 
 $HOME/.config/polybar/launch.sh
-$HOME/.local/bin/custom_scripts/run_on_boot &
-$HOME/.local/bin/custom_scripts/locker
+$HOME/.local/bin/scripts/run_on_boot &
+$HOME/.local/bin/scripts/locker
 
