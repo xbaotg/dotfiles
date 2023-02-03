@@ -12,7 +12,7 @@ while true; do
         /usr/bin/xinput set-prop $MOUSEID 'libinput Natural Scrolling Enabled' 0
       fi
   fi
-  sleep 10
+  sleep 60
 done &
 
 betterlockscreen -w

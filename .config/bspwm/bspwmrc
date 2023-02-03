@@ -37,14 +37,16 @@ bspc rule -a chromium desktop='^2' follow=on focus=on
 bspc rule -a google-chrome-stable desktop='^2' follow=on focus=on
 bspc rule -a Google-chrome desktop='^2' follow=on focus=on
 
-# bspc rule -a Alacritty desktop='^2'
-bspc rule -a Zathura state=tiled
+## 3 > media
+bspc rule -a vlc desktop='^3' follow=on focus=on
+bspc rule -a Eog desktop='^3' follow=on focus=on state=floating
 
-## Always Floating Apps
+## 4 > files
+bspc rule -a Thunar desktop='^4' state=floating follow=on focus=on
+bspc rule -a Zathura desktop='^4' state=tiled follow=on focus=on
+
+# 
 bspc rule -a Alacritty-Floating state=floating follow=on focus=on
-bspc rule -a Thunar state=floating follow=on focus=on
-
-
 
 # run on startup
 flameshot &
