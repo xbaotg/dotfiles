@@ -22,11 +22,17 @@ control + alt + x
 control + alt + r
   alacritty -e /usr/bin/ranger
 
-control + alt + l
+control + alt + shift + l
   betterlockscreen --lock
 
+control + alt + h
+  bspc node --flag hidden=on
+
+control + alt + shift + h
+  bspc node $(bspc query -N -n .hidden.local.window | head -n 1) --flag hidden=off
+
 super + shift + {f,w}
-	{thunar,google-chrome-stable}
+	{nautilus,google-chrome-stable}
 
 control + alt + Tab
   bspc desktop -f next.occupied
@@ -124,8 +130,11 @@ super + bracket{left,right}
 	bspc desktop -f {prev,next}.local
 
 # focus the last node/desktop
-super + {grave,Tab}
-	bspc {node,desktop} -f last
+# super + {grave,Tab}
+# 	bspc {node,desktop} -f last
+
+super + {shift + Tab, Tab}
+  bspc desktop -f {prev,next}.occupied
 
 # focus the older or newer node in the focus history
 super + {o,i}

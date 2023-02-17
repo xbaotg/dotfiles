@@ -4,8 +4,6 @@ if not present then
   return
 end
 
--- vim.g.theme_switcher_loaded = true
-
 -- require("base46").load_highlight "telescope"
 
 local options = {
@@ -62,18 +60,11 @@ local options = {
   },
 
   extensions_list = { "themes", "terms" },
-  extensions = {
-    file_browser = {
-      theme = "ivy",
-      hijack_netrw = true,
-    },
-  },
 }
 
 -- check for any override
 options = require("core.utils").load_override(options, "nvim-telescope/telescope.nvim")
 telescope.setup(options)
-require("telescope").load_extension "file_browser"
 
 -- load extensions
 pcall(function()
