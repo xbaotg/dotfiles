@@ -10,4 +10,4 @@ for i in /sys/class/hwmon/hwmon*/temp*_input; do
 done
 
 polybar --quiet --reload top -c ~/.config/polybar/config.ini &
-polybar --quiet --reload bottom -c ~/.config/polybar/config.ini &
+# polybar --quiet --reload bottom -c ~/.config/polybar/config.ini &
