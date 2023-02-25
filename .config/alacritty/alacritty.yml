@@ -20,7 +20,7 @@ font:
   bold_italic:
     family: JetBrainsMono Nerd Font
     style: BoldItalic
-  size: 14
+  size: 15
 draw_bold_text_with_bright_colors: true
 
 selection:
@@ -46,8 +46,8 @@ window:
     columns: 80
     lines: 24
   padding:
-    x: 15
-    y: 15
+    x: 10
+    y: 10
   dynamic_padding: true
   dynamic_title: false
   # decorations: Full
