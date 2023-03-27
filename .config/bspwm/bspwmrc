@@ -39,7 +39,7 @@ bspc rule -a Google-chrome desktop='^2' follow=on focus=on
 
 ## 3 > media
 bspc rule -a vlc desktop='^3' follow=on focus=on
-bspc rule -a Eog desktop='^4' follow=on focus=on state=floating
+bspc rule -a Eog focus=on state=floating
 
 ## 4 > files
 bspc rule -a Zathura desktop='^4' state=tiled follow=on focus=on
@@ -49,6 +49,9 @@ bspc rule -a Evince desktop='^4' state=tiled follow=on focus=on
 ## 5 -> files
 bspc rule -a Thunar desktop='^5' state=floating follow=on focus=on
 bspc rule -a org.gnome.Nautilus rectangle 1200x800+0+0 center=true desktop='^5' state=floating follow=on focus=on
+
+## 6 -> files
+bspc rule -a Skype desktop='^6' follow=on focus=on
 
 # 
 bspc rule -a Alacritty-Floating state=floating follow=on focus=on

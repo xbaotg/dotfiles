@@ -18,7 +18,7 @@ done &
 betterlockscreen -w
 
 /usr/bin/xset r rate 300 45
-/snap/bin/mailspring --background &
+# /snap/bin/mailspring --background &
 
 ibus-daemon --xim
 ibus restart

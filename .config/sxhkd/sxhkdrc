@@ -4,7 +4,7 @@
 
 # terminal emulator
 super + Return
-	alacritty
+	~/.local/bin/scripts/spawn-alacritty-cwd &
 
 super + shift + Return 
   alacritty --class 'Alacritty-Floating'

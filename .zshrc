@@ -8,6 +8,9 @@ PATH=$PATH:$HOME/.local/bin
 export LD_LIBRARY_PATH=/usr/local/cuda-11.7/lib64:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
 export CARD_BL=$(ls /sys/class/backlight/)
+export AUTOSWITCH_SILENT=1
+export LOCAL_FILES_SERVING_ENABLED=true
+export LOCAL_FILES_DOCUMENT_ROOT=/home/bao
 
 # --------------------------------------------------------------------------------
 
@@ -47,6 +50,12 @@ uit_temp_with_sources_ne () {
 uit_temp_no_sources_ne () {
   mkdir -p "$1"/
   cp ~/Templates/uit.cpp "$1"/main.cpp
+}
+
+compe () {
+  mkdir -p "$1"/
+  cp ~/Templates/cp.cpp "$1"/main.cpp
+  vi "$1"/main.cpp
 }
 
 # --------------------------------------------------------------------------------
@@ -95,6 +104,10 @@ push_dotfiles() {
   git --git-dir=.git-dotfiles commit -m "$1";
   git --git-dir=.git-dotfiles push origin main;
   cd -;
+}
+
+connect_openvpn() {
+  openvpn --config ~/Documents/CLBAI/OpenVPN/pfsense4-udp4-1195-config.ovpn;
 }
 
 alias ls='exa --no-permissions --no-user --no-time -a --icons --no-filesize --group-directories-first -s modified -r'

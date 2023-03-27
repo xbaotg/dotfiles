@@ -136,7 +136,7 @@ local plugins = {
   },
 
   ["saadparwaiz1/cmp_luasnip"] = { after = "LuaSnip" },
-  ["hrsh7th/cmp-nvim-lua"] = { after = "cmp_luasnip" },
+  ["hrsh7th/cmp-nvim-lua"] = { after = "nvim-cmp" },
   ["hrsh7th/cmp-nvim-lsp"] = { after = "cmp-nvim-lua" },
   ["hrsh7th/cmp-buffer"] = { after = "cmp-nvim-lsp" },
   ["hrsh7th/cmp-path"] = { after = "cmp-buffer" },
@@ -173,28 +173,28 @@ local plugins = {
     end,
   },
 
-  ["nvim-telescope/telescope.nvim"] = {
-    cmd = "Telescope",
-    config = function()
-      require "plugins.configs.telescope"
-    end,
-    setup = function()
-      require("core.utils").load_mappings "telescope"
-    end,
-  },
+  -- ["nvim-telescope/telescope.nvim"] = {
+  --   cmd = "Telescope",
+  --   config = function()
+  --     require "plugins.configs.telescope"
+  --   end,
+  --   setup = function()
+  --     require("core.utils").load_mappings "telescope"
+  --   end,
+  -- },
 
   -- ["vimpostor/vim-tpipeline"] = {},
-  ["woosaaahh/sj.nvim"] = {
-    config = function()
-      local sj = require "sj"
-      sj.setup()
-
-      vim.keymap.set("n", "s", sj.run)
-      vim.keymap.set("n", "<A-,>", sj.prev_match)
-      vim.keymap.set("n", "<A-;>", sj.next_match)
-      vim.keymap.set("n", "<localleader>s", sj.redo)
-    end,
-  },
+  -- ["woosaaahh/sj.nvim"] = {
+  --   config = function()
+  --     local sj = require "sj"
+  --     sj.setup()
+  --
+  --     vim.keymap.set("n", "s", sj.run)
+  --     vim.keymap.set("n", "<A-,>", sj.prev_match)
+  --     vim.keymap.set("n", "<A-;>", sj.next_match)
+  --     vim.keymap.set("n", "<localleader>s", sj.redo)
+  --   end,
+  -- },
   --
   -- ["asiryk/auto-hlsearch.nvim"] = {
   --   config = function()
