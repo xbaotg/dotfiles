@@ -112,3 +112,8 @@ connect_openvpn() {
 
 alias ls='exa --no-permissions --no-user --no-time -a --icons --no-filesize --group-directories-first -s modified -r'
 alias -g ls='exa --no-permissions --no-user --no-time -a --icons --no-filesize --group-directories-first -s modified -r'
+
+if [[ -t 0 && $- = *i* ]]
+then
+    stty -ixon
+fi
