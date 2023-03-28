@@ -100,7 +100,7 @@ eval "$(starship init zsh)"
 # commands
 push_dotfiles() {
   cd ~;
-  git --git-dir=.git-dotfiles add .zshrc .Xresources .config/nvim .config/alacritty .config/rofi .config/bspwm .config/polybar .config/sxhkd .tmux.conf .config/dunst/ .config/ranger ~/.config/pycodestyle ~/.local/bin/scripts/ ~/.local/bin/themes/ ~/.config/flameshot/ ~/.tmux ~/.config/betterlockscreenrc ~/.config/picom/ README.md ~/.imgs_dot/ ~/.config/mini-lightdm ~/.config/zathura/ ~/.config/gtk-3.0/ ~/.config/starship.toml;
+  git --git-dir=.git-dotfiles add .zshrc .Xresources .config/nvim/ .config/alacritty .config/rofi .config/bspwm .config/polybar .config/sxhkd .tmux.conf .config/dunst/ .config/ranger ~/.config/pycodestyle ~/.local/bin/scripts/ ~/.local/bin/themes/ ~/.config/flameshot/ ~/.tmux ~/.config/betterlockscreenrc ~/.config/picom/ README.md ~/.imgs_dot/ ~/.config/mini-lightdm ~/.config/zathura/ ~/.config/gtk-3.0/ ~/.config/starship.toml;
   git --git-dir=.git-dotfiles commit -m "$1";
   git --git-dir=.git-dotfiles push origin main;
   cd -;
