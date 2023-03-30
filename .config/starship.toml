@@ -106,7 +106,8 @@ disabled = true
 
 [python]
 pyenv_version_name = true
-format = '[${symbol}]($style)'
+# format = '[${symbol}]($style)'
+format = '[${symbol}(\($virtualenv\) )]($style)'	
 
 [git_branch]
 format = '[$symbol]($style)'

@@ -90,6 +90,7 @@ antigen bundle command-not-found
 antigen bundle colored-man-pages
 antigen bundle MichaelAquilina/zsh-autoswitch-virtualenv
 # antigen theme spaceship-prompt/spaceship-prompt
+antigen bundle sunlei/zsh-ssh
 antigen apply
 
 eval "$(starship init zsh)"

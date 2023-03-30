@@ -75,9 +75,9 @@ local options = {
     },
   },
   hijack_directories = {
-        enable = false,
-        auto_open = true,
-      },
+    enable = false,
+    auto_open = true,
+  },
   renderer = {
     highlight_git = false,
     highlight_opened_files = "none",

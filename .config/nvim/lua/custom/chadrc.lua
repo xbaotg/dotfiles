@@ -109,6 +109,7 @@ M.plugins = {
   },
   ["alvan/vim-closetag"] = {},
   ["EdenEast/nightfox.nvim"] = {},
+  ["catppuccin/nvim"] = {},
   ["mbbill/undotree"] = {},
   -- ["echasnovski/mini.nvim"] = {},
   -- ["echasnovski/mini.animate"] = {
